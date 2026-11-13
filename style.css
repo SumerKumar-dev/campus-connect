@@ -1,11 +1,11 @@
 :root{
-  --ink:#1b1f3b; --muted:#5b6078; --bg:#f3f5fb; --card:#ffffff; --line:#d9ddee;
-  --brand:#3b3fd8; --brand-ink:#ffffff; --note1:#fff3a8; --note2:#c9f0dc; --note3:#ffd6d6; --note4:#d6e6ff;
+  --ink:#342b12; --muted:#76683d; --bg:#fffbea; --card:#ffffff; --line:#eadfb3;
+  --brand:#d69e00; --brand-ink:#2b230d; --note1:#fff0a6; --note2:#ffed99; --note3:#ffe78a; --note4:#fff4c2;
   --radius:14px; color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
-  :root{--ink:#eceefb;--muted:#a3a8c7;--bg:#12142a;--card:#1c1f3d;--line:#32365e;--brand:#7c80ff;--brand-ink:#12142a;
-    --note1:#4b4520;--note2:#1f4535;--note3:#4d2a2f;--note4:#23385c;color-scheme:dark}
+  :root{--ink:#f7efcf;--muted:#c8b979;--bg:#211d0e;--card:#302a15;--line:#514522;--brand:#facc15;--brand-ink:#29220b;
+    --note1:#51451a;--note2:#4a4019;--note3:#59491a;--note4:#473c16;color-scheme:dark}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
