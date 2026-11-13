@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusConnect – College Problem Solver</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#home">CampusConnect</a>
+  <nav>
+    <a href="#lost">Lost &amp; Found</a>
+    <a href="#notes">Notes</a>
+    <a href="#events">Events</a>
+    <a href="#forum">Forum</a>
+    <a href="#anon">Suggestion box</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <h1>Campus ki har problem, ek hi board par.</h1>
+  <p>Kuch kho gaya? Notes chahiye? Event ki khabar? Sab yahin post karo aur dhundo.</p>
+  <div class="board" aria-hidden="true">
+    <span class="note n1">Blue bottle mila, library ke paas</span>
+    <span class="note n2">DBMS notes unit 3</span>
+    <span class="note n3">Tech fest: Sat 10am</span>
+    <span class="note n4">Wi-Fi hostel B me slow hai?</span>
+  </div>
+</section>
+
+<section id="lost">
+  <h2>Lost &amp; Found</h2>
+  <form id="lostForm" class="card form">
+    <select name="type" required><option>Lost</option><option>Found</option></select>
+    <input name="item" placeholder="Item (e.g. black wallet)" required maxlength="60">
+    <input name="place" placeholder="Kahan mila / kahan kho gaya" required maxlength="60">
+    <input name="contact" placeholder="Contact (phone / email)" required maxlength="60">
+    <button>Post item</button>
+  </form>
+  <input id="lostSearch" class="search" type="search" placeholder="Search items…">
+  <div id="lostList" class="grid"></div>
+</section>
+
+<section id="notes">
+  <h2>Notes &amp; study material</h2>
+  <form id="notesForm" class="card form">
+    <input name="title" placeholder="Title (e.g. DBMS Unit 3)" required maxlength="80">
+    <input name="subject" placeholder="Subject" required maxlength="40">
+    <input name="link" type="url" placeholder="Drive / PDF link (https://…)" required>
+    <button>Share notes</button>
+  </form>
+  <input id="notesSearch" class="search" type="search" placeholder="Search by title or subject…">
+  <div id="notesList" class="grid"></div>
+</section>
+
+<section id="events">
+  <h2>Events &amp; announcements</h2>
+  <form id="eventsForm" class="card form">
+    <input name="title" placeholder="Event name" required maxlength="80">
+    <input name="date" type="date" required>
+    <input name="venue" placeholder="Venue" required maxlength="60">
+    <input name="details" placeholder="Short details" maxlength="160">
+    <button>Announce</button>
+  </form>
+  <div id="eventsList" class="grid"></div>
+</section>
+
+<section id="forum">
+  <h2>Student forum</h2>
+  <form id="forumForm" class="card form">
+    <input name="name" placeholder="Your name" required maxlength="30">
+    <input name="title" placeholder="Apna sawal ya topic" required maxlength="100">
+    <textarea name="body" placeholder="Detail me batao…" rows="3" maxlength="400"></textarea>
+    <button>Post question</button>
+  </form>
+  <div id="forumList" class="stack"></div>
+</section>
+
+<section id="anon">
+  <h2>Anonymous suggestion box</h2>
+  <p class="hint">Koi naam ya pehchaan save nahi hoti. Sirf message dikhta hai.</p>
+  <form id="anonForm" class="card form">
+    <select name="kind" required><option>Complaint</option><option>Suggestion</option></select>
+    <textarea name="message" placeholder="Jo kehna hai likho…" rows="3" required maxlength="500"></textarea>
+    <button>Send anonymously</button>
+  </form>
+  <div id="anonList" class="grid"></div>
+</section>
+</main>
+
+<footer>CampusConnect · data aapke browser me save hota hai</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
